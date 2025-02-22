@@ -1,6 +1,7 @@
 faster-whisper
 moviepy==2.0.0.dev2
 imageio==2.25.1
-transformers==4.48.3
 torch @ https://download.pytorch.org/whl/cu124/torch-2.5.1%2Bcu124-cp311-cp311-linux_x86_64.whl
-
+torchaudio @ https://download.pytorch.org/whl/cu124/torchaudio-2.5.1%2Bcu124-cp311-cp311-linux_x86_64.whl
+torchvision @ https://download.pytorch.org/whl/cu124/torchvision-0.20.1%2Bcu124-cp311-cp311-linux_x86_64.whl
+transformers==4.48.3
