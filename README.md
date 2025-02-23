@@ -1,14 +1,14 @@
-AI-Powered Video Captioning System
-An advanced video captioning system that automatically transcribes audio, generates synchronized captions, and creates video summaries using AI technologies.
-🌟 Features
+Video Captioning System with AI Transcription
+An intelligent video captioning system that automatically transcribes audio, generates synchronized captions, and creates content summaries using AI technologies. The system uses OpenAI's Whisper for accurate transcription and provides customizable caption styling.
+Features
 
-Automated audio extraction and transcription using Whisper AI
-Word-level timing information for precise caption synchronization
-Customizable caption styling and formatting
-Intelligent caption placement and timing optimization
-Video content summarization
-Progress tracking and detailed logging
-Modular architecture for easy extensibility
+Automatic audio extraction and transcription
+AI-powered word-level timing for precise caption synchronization
+Customizable caption styles (font, size, colors, positioning)
+Automatic content summarization
+Progress tracking with detailed logging
+Modular and extensible architecture
 
-🛠️ Prerequisites
+Installation
+
 
