@@ -11,7 +11,7 @@
 
 #### Clone the repository:
 ```bash
-git clone https://github.com/yourusername/video-captioning-system.git
+git clone https://github.com/Gitanshu1903/Educational-Video-Processor.git
 cd video-captioning-system
 ```
 
@@ -38,7 +38,7 @@ sudo apt install imagemagick -y
 2. Run the script:
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 3. Find your captioned video as `output.mp4` and content summary as `summary.json`.
