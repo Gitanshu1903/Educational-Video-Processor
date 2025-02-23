@@ -1,36 +1,3 @@
-# from moviepy.editor import VideoFileClip
-# import json
-# from faster_whisper import WhisperModel
-
-# class AudioProcessor:
-#     def __init__(self, config):
-#         self.config = config
-#         self.model = WhisperModel(config.MODEL_SIZE)
-    
-#     def extract_audio(self, video_path):
-#         """Extract audio from video file"""
-#         video_clip = VideoFileClip(video_path)
-#         audio_clip = video_clip.audio
-#         audio_path = "temp_audio.mp3"
-#         audio_clip.write_audiofile(audio_path)
-#         audio_clip.close()
-#         return audio_path
-
-#     def transcribe_audio(self, audio_path):
-#         """Transcribe audio to text with timestamps"""
-#         segments, _ = self.model.transcribe(audio_path, word_timestamps=True)
-#         word_level_info = []
-        
-#         for segment in segments:
-#             for word in segment.words:
-#                 word_level_info.append({
-#                     'word': word.word,
-#                     'start': word.start,
-#                     'end': word.end
-#                 })
-        
-#         return word_level_info
-
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any
 from moviepy.editor import VideoFileClip
@@ -103,9 +70,3 @@ class AudioExtractionError(Exception):
 class TranscriptionError(Exception):
     """Raised when transcription fails"""
     pass
-
-# Example usage:
-def create_audio_processor(model_size: str) -> AudioProcessor:
-    extractor = MoviePyAudioExtractor()
-    transcriber = WhisperTranscriber(model_size)
-    return AudioProcessor(extractor, transcriber)
