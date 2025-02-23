@@ -12,7 +12,7 @@
 #### Clone the repository:
 ```bash
 git clone https://github.com/Gitanshu1903/Educational-Video-Processor.git
-cd video-captioning-system
+cd Educational-Video-Processor
 ```
 
 ### Manual Installation
