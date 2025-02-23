@@ -242,28 +242,3 @@ class VideoWriteError(Exception):
 class CompositionError(Exception):
     """Raised when video composition fails"""
     pass
-
-# Example usage
-def process_video_with_captions(
-    input_path: str,
-    output_path: str,
-    captions: List[Dict[str, Any]],
-    background: ColorClip
-) -> None:
-    # Create processor with default settings
-    processor = VideoProcessor.create_default()
-    
-    # Create progress callback
-    progress_callback = ConsoleProgressCallback()
-    
-    try:
-        processor.process_video(
-            input_path=input_path,
-            output_path=output_path,
-            captions=captions,
-            background=background,
-            progress_callback=progress_callback
-        )
-    except (VideoLoadError, CompositionError, VideoWriteError) as e:
-        logging.error(f"Video processing failed: {e}")
-        raise
