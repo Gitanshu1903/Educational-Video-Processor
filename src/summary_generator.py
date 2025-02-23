@@ -91,7 +91,7 @@ class TextSummaryGenerator:
             output_path: Path where the summary file will be saved
         """
         # Combine words into full text
-        full_text = " ".join(word["text"] for word in word_level_info)
+        full_text = " ".join(word["word"] for word in word_level_info)
         
         # Generate educational summary
         educational_summary = self.generate_educational_summary(full_text)
