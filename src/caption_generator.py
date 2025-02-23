@@ -258,27 +258,3 @@ class ClipGenerationError(Exception):
 class CaptionGenerationError(Exception):
     """Raised when caption generation fails"""
     pass
-
-# Example usage
-def create_caption_generator(frame_height: int) -> CaptionGenerator:
-    style = CaptionStyle(
-        font_name="Helvetica",
-        font_size=int(frame_height * 0.075),
-        text_color="white",
-        highlight_color="yellow",
-        stroke_color="white",
-        stroke_width=1.5,
-        background_color=(64, 64, 64),
-        background_opacity=0.6
-    )
-    
-    constraints = CaptionConstraints(
-        max_chars_per_line=30,
-        max_duration_per_line=2.5,
-        max_gap_between_words=1.5
-    )
-    
-    formatter = StandardCaptionFormatter()
-    clip_generator = StandardClipGenerator()
-    
-    return CaptionGenerator(formatter, clip_generator, style, constraints)
