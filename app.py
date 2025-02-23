@@ -16,7 +16,7 @@ from video_processor import (
     VideoProcessor, VideoSpec, ConsoleProgressCallback,
     StandardVideoLoader, OptimizedVideoWriter, StandardCaptionCompositor
 )
-from summary_generator import TextSummaryGenerator
+# from summary_generator import TextSummaryGenerator
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -80,7 +80,7 @@ def initialize_processors():
     )
     
     # Initialize Summary Generator
-    summary_generator = TextSummaryGenerator()
+    # summary_generator = TextSummaryGenerator()
     
     return (
         audio_processor,
@@ -116,7 +116,7 @@ def process_video(
         word_level_info = audio_processor.process_video(str(input_path))
         
         # Generate summary
-        summary_generator.generate_summary(word_level_info, summary_path)
+        # summary_generator.generate_summary(word_level_info, summary_path)
         
         # Load video for frame size
         video = StandardVideoLoader().load(str(input_path))
@@ -148,16 +148,17 @@ def process_video(
             progress_callback=ConsoleProgressCallback()
         )
         
-        # Read summary
-        with open(summary_path, 'r') as f:
-            summary_data = json.load(f)
+        # # Read summary
+        # with open(summary_path, 'r') as f:
+        #     summary_data = json.load(f)
         
-        # Read processed video
-        with open(output_path, 'rb') as f:
-            processed_video = f.read()
+        # # Read processed video
+        # with open(output_path, 'rb') as f:
+        #     processed_video = f.read()
             
-        return processed_video, summary_data
-        
+        # return processed_video, summary_data
+        return processed_video
+       
     except Exception as e:
         st.error(f"Error processing video: {str(e)}")
         return None
